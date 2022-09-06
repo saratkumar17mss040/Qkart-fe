@@ -40,6 +40,7 @@ const Login = () => {
 							variant: 'success',
 						});
 						persistLogin(token, username, balance);
+						setSuccess(true);
 					}
 				})
 				.catch((err) => {
@@ -54,7 +55,6 @@ const Login = () => {
 				});
 		}
 		setIsLoding(false);
-		setSuccess(true);
 	};
 
 	const validateInput = (data) => {
